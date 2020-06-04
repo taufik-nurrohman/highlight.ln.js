@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html dir="ltr">
+  <head>
+    <meta content="width=device-width" name="viewport">
+    <meta charset="utf-8">
+    <title>Line Number Plugin for Highlight.js</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/default.min.css" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      <h1>Line Number Plugin for Highlight.js</h1>
+    </header>
+    <main>
+      <h2>CSS</h2>
+      <pre><code class="css">* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+  <mark>color</mark>: inherit;
+  box-sizing: border-box;
+}
+
+html {
+  background: #fff;
+  font: <mark>normal</mark> normal 16px/1.4 sans-serif;
+  color: #000;
+}
+
+body {
+  padding: 2em;
+}
+
+#main {
+  max-width: 600px;
+  margin: 0 auto;
+}</code></pre>
+      <h2>HTML</h2>
+      <pre><code class="html">&lt;main <mark>id="ma</mark>in"&gt;
+  &lt;p&gt;Loading&amp;hellip;&lt;/p&gt;
+&lt;/main&gt;</code></pre>
+      <h2>JavaScript</h2>
+      <pre><code class="js">let controller = new AbortController;
+fetch('https://example.com/api/list.json', {
+    signal: controller.signal
+}).then(<mark>response</mark> =&gt; response.json()).then(json =&gt; {
+    let out = "";
+    for (let j in json) {
+        out += '&lt;article&gt;';
+        out += '&lt;h2&gt;' + json[j].title + '&lt;/h2&gt;';
+        out += '&lt;p&gt;' + json[j].description + '&lt;/p&gt;';
+        out += '&lt;/article&gt;';
+    }
+    document.querySelector('#main').innerHTML = out;
+});</code></pre>
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/highlight.min.js"></script>
+    <script src="highlight.ln.min.js"></script>
+    <script>
+    hljs.initHighlighting();
+    </script>
+  </body>
+</html>
