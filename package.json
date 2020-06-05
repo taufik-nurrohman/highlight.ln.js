@@ -1,0 +1,25 @@
+{
+  "name": "@taufik-nurrohman/highlight.ln.js",
+  "description": "Line number plugin for Highlight.js",
+  "version": "1.0.0",
+  "main": "highlight.ln.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/taufik-nurrohman/highlight.ln.js.git"
+  },
+  "keywords": [
+    "highlight",
+    "highlightjs",
+    "plugin",
+    "syntax"
+  ],
+  "author": "Taufik Nurrohman",
+  "license": "BSD",
+  "bugs": {
+    "url": "https://github.com/taufik-nurrohman/highlight.ln.js/issues"
+  },
+  "homepage": "https://taufik-nurrohman.github.io/highlight.ln.js/index.html"
+}
