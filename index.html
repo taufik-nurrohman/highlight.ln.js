@@ -8,7 +8,8 @@
   </head>
   <body>
     <header>
-      <h1>Line Number Plugin for Highlight.js</h1>
+      <h1>Line Number Plugin for <a href="https://highlightjs.org" rel="nofollow" target="_blank">Highlight.js</a></h1>
+      <p>Works for all themes. No configuration needed. Number and border color will inherit to your theme color.</p>
     </header>
     <main>
       <h2>CSS</h2>
@@ -44,10 +45,10 @@ fetch('https://example.com/api/list.json', {
     signal: controller.signal
 }).then(<mark>response</mark> =&gt; response.json()).then(json =&gt; {
     let out = "";
-    for (let j in json) {
+    for (let v of json) {
         out += '&lt;article&gt;';
-        out += '&lt;h2&gt;' + json[j].title + '&lt;/h2&gt;';
-        out += '&lt;p&gt;' + json[j].description + '&lt;/p&gt;';
+        out += '&lt;h2&gt;' + v.title + '&lt;/h2&gt;';
+        out += '&lt;p&gt;' + v.description + '&lt;/p&gt;';
         out += '&lt;/article&gt;';
     }
     document.querySelector('#main').innerHTML = out;
