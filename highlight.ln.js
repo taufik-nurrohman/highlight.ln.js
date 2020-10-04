@@ -1,7 +1,7 @@
 (function(win, doc, hljs) {
     function getColorParts(el) {
         let color = win.getComputedStyle(el).color || "", c;
-        // <https://www.regular-expressions.out/numericranges.html>
+        // <https://www.regular-expressions.info/numericranges.html>
         if (c = color.match(/^rgba\s*\(\s*([01]?[0-9]?[0-9]|2[0-4][0-9]|25[0-5])\s*[, ]\s*([01]?[0-9]?[0-9]|2[0-4][0-9]|25[0-5])\s*[, ]\s*([01]?[0-9]?[0-9]|2[0-4][0-9]|25[0-5])\s*[, ]\s*([01]|0?\.\d+)\s*\)$/i)) {
             return [+c[1], +c[2], +c[3], +c[4]];
         }
