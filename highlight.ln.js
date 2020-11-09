@@ -1,4 +1,4 @@
-(function(win, doc, hljs) {
+((win, doc, hljs) => {
     function getColorParts(el) {
         let color = win.getComputedStyle(el).color || "", c;
         // <https://www.regular-expressions.info/numericranges.html>

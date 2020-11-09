@@ -2,7 +2,7 @@
   "name": "@taufik-nurrohman/highlight.ln.js",
   "description": "Line number plugin for Highlight.js",
   "version": "1.0.0",
-  "main": "highlight.ln.js",
+  "main": "highlight.ln.mjs",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
