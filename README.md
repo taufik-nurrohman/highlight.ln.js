@@ -24,7 +24,7 @@ hljs.initHighlighting();
 import hljs from 'highlight.js/lib/core';
 import css from 'highlight.js/lib/languages/css';
 
-import {highlightWithLineNumbers} from './highlight.ln.mjs';
+import {highlightWithLineNumbers} from 'highlight.ln.js';
 
 hljs.registerLanguage('css', css);
 
