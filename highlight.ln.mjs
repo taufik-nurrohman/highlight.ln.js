@@ -10,5 +10,4 @@ function highlightWithLineNumbers({language, value}) {
     return '<pre><code class="hljs">' + generateLineNumbers(value) + '</code><code class="hljs language-' + language + '">' + value + '</code></pre>';
 }
 
-export function generateLineNumbers;
-export function highlightWithLineNumbers;
+export {generateLineNumbers, highlightWithLineNumbers};
