@@ -1,25 +1,47 @@
 {
-  "name": "@taufik-nurrohman/highlight.ln.js",
-  "description": "Line number plugin for Highlight.js",
-  "version": "1.0.0",
-  "main": "highlight.ln.mjs",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "author": "Taufik Nurrohman",
+  "browser": "index.min.js",
+  "bugs": "https://github.com/taufik-nurrohman/highlight.ln.js/issues",
+  "dependencies": {
+    "@taufik-nurrohman/document": "^1.0.1",
+    "@taufik-nurrohman/is": "^1.0.1"
   },
+  "description": "Line number plugin for Highlight.js",
+  "devDependencies": {
+    "@taufik-nurrohman/factory": "^2.1.0"
+  },
+  "exports": {
+    "import": "./index.mjs",
+    "require": "./index.js"
+  },
+  "files": [
+    "index.js",
+    "index.min.js",
+    "index.mjs"
+  ],
+  "funding": {
+    "url": "https://paypal.me/tatautaufik"
+  },
+  "homepage": "https://taufik-nurrohman.js.org/highlight.ln.js/index.html",
+  "keywords": [
+    "highlight",
+    "highlighter",
+    "highlightjs",
+    "line",
+    "number",
+    "plugin",
+    "syntax"
+  ],
+  "license": "BSD",
+  "main": "index.js",
+  "module": "index.mjs",
+  "name": "@taufik-nurrohman/highlight.ln.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/taufik-nurrohman/highlight.ln.js.git"
   },
-  "keywords": [
-    "highlight",
-    "highlightjs",
-    "plugin",
-    "syntax"
-  ],
-  "author": "Taufik Nurrohman",
-  "license": "BSD",
-  "bugs": {
-    "url": "https://github.com/taufik-nurrohman/highlight.ln.js/issues"
+  "scripts": {
+    "pack": "pack --clean=false --from=.factory --js-format=umd --js-name=hljs.LineNumberPlugin --mjs=true --to=."
   },
-  "homepage": "https://taufik-nurrohman.github.io/highlight.ln.js/index.html"
+  "version": "2.0.0"
 }

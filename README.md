@@ -8,28 +8,44 @@ Line Number Plugin for [Highlight.js](https://github.com/highlightjs/highlight.j
 Usage
 -----
 
-### Browsers
+### Browser
 
-~~~ .html
+~~~ html
 <script src="highlight.min.js"></script>
-<script src="highlight.ln.min.js"></script>
+<script src="highlight.ln.js/index.min.js"></script>
 <script>
-hljs.initHighlighting();
+  hljs.highlightAll();
 </script>
 ~~~
 
-### ES6 Modules (TODO)
+### Node.js
 
-~~~ .js
+~~~ js
 import hljs from 'highlight.js/lib/core';
 import css from 'highlight.js/lib/languages/css';
 
-import {highlightWithLineNumbers} from 'highlight.ln.js';
+import LineNumberPlugin from '@taufik-nurrohman/highlight.ln.js';
+
+hljs.addPlugin(LineNumberPlugin);
 
 hljs.registerLanguage('css', css);
 
-const highlighted = hljs.highlight('css', '#foo { bar: baz; }');
-const highlightedMarkup = highlightWithLineNumbers(highlighted);
+hljs.highlightAll();
+~~~
+
+### CommonJS
+
+~~~ js
+const hljs = require('highlight.js/lib/core');
+const css = require('highlight.js/lib/languages/css');
+
+const LineNumberPlugin = require('@taufik-nurrohman/highlight.ln.js').default;
+
+hljs.addPlugin(LineNumberPlugin);
+
+hljs.registerLanguage('css', css);
+
+hljs.highlightAll();
 ~~~
 
 License

@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html dir="ltr">
+<html>
   <head>
     <meta content="width=device-width" name="viewport">
     <meta charset="utf-8">
     <title>Line Number Plugin for Highlight.js</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/default.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css" rel="stylesheet">
   </head>
   <body>
     <header>
@@ -13,18 +13,18 @@
     </header>
     <main>
       <h2>CSS</h2>
-      <pre><code class="css">* {
+      <pre><code class="hljs language-css">* {
+  box-sizing: border-box;
+  color: inherit;
+  font: inherit;
   margin: 0;
   padding: 0;
-  font: inherit;
-  <mark>color</mark>: inherit;
-  box-sizing: border-box;
 }
 
-html {
+:root {
   background: #fff;
-  font: <mark>normal</mark> normal 16px/1.4 sans-serif;
   color: #000;
+  font: normal normal 16px/1.4 sans-serif;
 }
 
 body {
@@ -32,18 +32,21 @@ body {
 }
 
 #main {
-  max-width: 600px;
   margin: 0 auto;
+  max-width: 600px;
 }</code></pre>
       <h2>HTML</h2>
-      <pre><code class="html">&lt;main <mark>id="ma</mark>in"&gt;
-  &lt;p&gt;Loading&amp;hellip;&lt;/p&gt;
+      <pre><code class="hljs language-html">&lt;main id="main"&gt;
+  &lt;p&gt;
+    Loading&amp;hellip;
+  &lt;/p&gt;
 &lt;/main&gt;</code></pre>
       <h2>JavaScript</h2>
-      <pre><code class="js">let controller = new AbortController;
-fetch('https://example.com/api/list.json', {
+      <pre><code class="hljs language-js">let controller = new AbortController;
+
+fetch('https://example.com/rest/index.json', {
     signal: controller.signal
-}).then(<mark>response</mark> =&gt; response.json()).then(json =&gt; {
+}).then(response =&gt; response.json()).then(json =&gt; {
     let out = "";
     for (let v of json) {
         out += '&lt;article&gt;';
@@ -54,10 +57,10 @@ fetch('https://example.com/api/list.json', {
     document.querySelector('#main').innerHTML = out;
 });</code></pre>
     </main>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/highlight.min.js"></script>
-    <script src="highlight.ln.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script src="index.min.js"></script>
     <script>
-    hljs.initHighlighting();
+      hljs.highlightAll();
     </script>
   </body>
 </html>

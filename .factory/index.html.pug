@@ -1,0 +1,62 @@
+html
+  head
+    meta(content='width=device-width' name='viewport')
+    meta(charset='utf-8')
+    title Line Number Plugin for Highlight.js
+    link(href='https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css' rel='stylesheet')
+  body
+    header
+      h1 Line Number Plugin for #[a(href='https://highlightjs.org' rel='nofollow' target='_blank') Highlight.js]
+      p Works for all themes. No configuration needed. Number and border color will inherit to your theme color.
+    main
+      h2 CSS
+      pre: code.hljs.language-css
+        | * {
+        |   box-sizing: border-box;
+        |   color: inherit;
+        |   font: inherit;
+        |   margin: 0;
+        |   padding: 0;
+        | }
+        |
+        | :root {
+        |   background: #fff;
+        |   color: #000;
+        |   font: normal normal 16px/1.4 sans-serif;
+        | }
+        |
+        | body {
+        |   padding: 2em;
+        | }
+        |
+        | #main {
+        |   margin: 0 auto;
+        |   max-width: 600px;
+        | }
+      h2 HTML
+      pre: code.hljs.language-html
+        | &lt;main id="main"&gt;
+        |   &lt;p&gt;
+        |     Loading&amp;hellip;
+        |   &lt;/p&gt;
+        | &lt;/main&gt;
+      h2 JavaScript
+      pre: code.hljs.language-js
+        | let controller = new AbortController;
+        |
+        | fetch('https://example.com/rest/index.json', {
+        |     signal: controller.signal
+        | }).then(response =&gt; response.json()).then(json =&gt; {
+        |     let out = "";
+        |     for (let v of json) {
+        |         out += '&lt;article&gt;';
+        |         out += '&lt;h2&gt;' + v.title + '&lt;/h2&gt;';
+        |         out += '&lt;p&gt;' + v.description + '&lt;/p&gt;';
+        |         out += '&lt;/article&gt;';
+        |     }
+        |     document.querySelector('#main').innerHTML = out;
+        | });
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js')
+    script(src='index.min.js')
+    script
+      | hljs.highlightAll();

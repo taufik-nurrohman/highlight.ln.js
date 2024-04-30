@@ -1,7 +1,7 @@
 BSD 3-Clause License
 
 Copyright (c) 2006, Ivan Sagalaev.
-Copyright (c) 2024, Taufik Nurrohman
+Copyright (c) %(year), Taufik Nurrohman
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
